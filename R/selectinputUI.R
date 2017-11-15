@@ -1,3 +1,4 @@
+#' @export
 selectInputUI <- function(id,
                           label = paste("Please provide a label argument to the numericInputUI",
                                          " with id = ", id, ".", sep = ""), 
@@ -28,6 +29,7 @@ selectInputUI <- function(id,
 #' @param selectize Vector of booleans indiciating if dropdown menus should be
 #' selectized.
 #' @param widths Vector of valid css widths.
+#' @export
 selectInputUIs <- function(ids, 
                             labels = NULL, 
                             choices = NULL,

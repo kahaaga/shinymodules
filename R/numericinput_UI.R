@@ -14,6 +14,7 @@
 #' when creating multiple instances of the same type of UI element, one could
 #' provide custom_css = "display: inline-block;" to display the different
 #' elements inline.
+#' @export
 numericValueUI <- function(id,
         label = paste("Please provide a label argument to the numericInputUI",
                     " with id = ", id, ".", sep = ""),
@@ -52,6 +53,7 @@ numericValueUI <- function(id,
 #' when creating multiple instances of the same type of UI element, one could
 #' provide custom_css = "display: inline-block;" to display the different
 #' elements inline.
+#' @export
 numericValueUIs <- function(ids,
                             labels = NULL,
                             values = NULL,

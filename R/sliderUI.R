@@ -1,3 +1,4 @@
+#'@export
 sliderInputUI <- function(
         id, 
         value = 0,
@@ -35,6 +36,7 @@ sliderInputUI <- function(
 
 
 #' Create tagList of sliderInputUI instances.
+#' @export
 sliderInputUIs <- function(ids, 
                             labels = NULL, 
                             values = NULL,
