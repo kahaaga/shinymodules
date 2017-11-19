@@ -2,7 +2,7 @@
 % Please edit documentation in R/actionbuttonUI.R
 \name{actionButtonUIs}
 \alias{actionButtonUIs}
-\title{Creates a tagList of action buttons wrapped in a (potentially styled) div.}
+\title{Creates a tagList of action buttons wrapped in (potentially styled) divs.}
 \usage{
 actionButtonUIs(ids, labels = NULL, icons = NULL, widths = NULL,
   custom_css = NULL)
@@ -17,22 +17,24 @@ numericValueUI(id = session$ns("someinput")).}
 \item{icons}{Icons for the action buttons.}
 
 \item{widths}{The widths of the action buttons. Must be valid
-css (i.e. "10%" or "150px" will work).}
+css (i.e. "10%" or "150px" will work; see shiny::validateCssUnit). 
+To use the same width on all action buttons, provide a single-text string or 
+a vector with one text string. To use different widths for each action 
+button, provide a vector of custom css text strings with one element per 
+action button.}
 
 \item{custom_css}{If provided, the action buttons are wrapped in divs each
 styled by the custom_css input. For example, when creating multiple action
 buttons, one could provide custom_css = "display: inline-block;" to display 
 the action buttons inline. To use the same style on all action buttons, 
 provide a single-text string or single-element vector. To use different
-styles for each action button, provide a vector of custom css text strings.}
+styles for each action button, provide a vector of custom css text strings
+with one element per action button.}
 }
 \description{
-Creates a tagList of action buttons wrapped in a (potentially styled) div.
+Creates a tagList of action buttons wrapped in (potentially styled) divs.
 }
 \examples{
 actionButtonUIs(ids = c("trigger_calculation", "trigger_plot"))
-actionButtonUIs(ids = c("trigger_calculation", "trigger_plot"), 
-custom_css = "display: inline-block")
-actionButtonUIs(ids = c("trigger_calculation", "trigger_plot"), 
-custom_css = c("display: inline-block", "display: inline-flex")
+actionButtonUIs(ids = c("trigger_calculation", "trigger_plot"), widths = "150px", custom_css = "display: inline-block")
 }
