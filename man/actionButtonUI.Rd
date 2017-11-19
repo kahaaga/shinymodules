@@ -38,22 +38,16 @@ if (interactive()) {
 # Function that displays the UI created server-side.
 actionButtonTestUI <- function(id) {
   ns <- NS(id)
-  
-  fluidRow(
-    uiOutput(ns("increment_btn")),
-    div(style = "margin-left: 20px", uiOutput(ns("number_of_clicks2")))
-  )
+  uiOutput(ns("increment_btn")
 }
 # Server-side module that generates the action button.
 actionButtonTest <- function(input, output, session) {
-  
   output$increment_btn <- renderUI({
     shinymodules::actionButtonUI(
       id = session$ns("increment"),
       label = "Push me to increment counter"
     )
   })
-  
 }
 
 ui <- fluidPage(
