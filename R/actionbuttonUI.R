@@ -4,7 +4,7 @@
 #'     remember to wrap the id with the relevant session namespace function, e.g.
 #'     numericValueUI(id = session$ns("someinput")).
 #' @param width The width of the shiny::numericValue UI element. Must be valid
-#'     css (i.e. "10%" or "150px" will work).
+#'     css (i.e. '10%' or '150px' will work).
 #' @param icon An icon for the action button (see shiny::icon).
 #' @param width The widths of the action buttons. Must be valid css.
 #' @param custom_css If provided, the action button is wrapped in a div styled 
