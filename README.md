@@ -1,2 +1,3 @@
 # shinymodules
-Wrappers for common shiny modules, function to build well-structured projects and insert UI elements using functions.
+Wrappers for shiny input widgets. Simplifies the building of modularised shiny
+applications.
