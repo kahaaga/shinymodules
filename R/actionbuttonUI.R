@@ -1,5 +1,5 @@
-#' Wrapper around shiny::numericInput.
-#' @param id A unique string id for the numericInput. If your code is modularised,
+#' Wrapper around shiny::actionButton.
+#' @param id A unique string id for the action button. If your code is modularised,
 #' remember to wrap the id with the relevant session namespace function, e.g.
 #' numericValueUI(id = session$ns("someinput")).
 #' @param width The width of the shiny::numericValue UI element. Must be valid
