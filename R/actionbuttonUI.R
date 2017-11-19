@@ -9,6 +9,52 @@
 #' @param custom_css If provided, the action button is wrapped in a div styled 
 #' by the custom_css input. For example, one could provide 
 #' custom_css = "display: inline-block;" to display the action button inline.
+#' @examples
+#' if (interactive()) {
+#' ####################################################################
+#' # Suppose we want an action button that increments a counter. We first 
+#' # need to define UI and server-side logic for the button.
+#' ####################################################################
+#' 
+#' # Function that displays the UI created server-side.
+#' actionButtonTestUI <- function(id) {
+#'   ns <- NS(id)
+#'   
+#'   fluidRow(
+#'     uiOutput(ns("increment_btn")),
+#'     div(style = "margin-left: 20px", uiOutput(ns("number_of_clicks2")))
+#'   )
+#' }
+
+#' # Server-side module that generates the action button.
+#' actionButtonTest <- function(input, output, session) {
+#'   
+#'   output$increment_btn <- renderUI({
+#'     shinymodules::actionButtonUI(
+#'       id = session$ns("increment"),
+#'       label = "Push me to increment counter"
+#'     )
+#'   })
+#'   
+#' }
+#' 
+#' ui <- fluidPage(
+#'   # Let's suppose we have a page where we want the action button
+#'   # to appear. Here we call the UI logic. We'll also add a textOutput 
+#'   # showing the number of times the button has been clicked.
+#'   fluidRow(actionButtonTestUI(id = "helppage"), textOutput("numclicks"))
+#' )
+#' 
+#' server <- function(input, output, session) {
+#'   # Call the module that generates the action button.
+#'   callModule(module = actionButtonTest, id = "helppage")
+#'   
+#'   # The number of times the button has been clicked
+#'   output$numclicks <- renderText({input[["helppage-increment-actionbutton"]]})
+#' }
+#' 
+#' shinyApp(ui = ui, server = server)
+#' }
 #' @export
 actionButtonUI <- function(id,
                            label = paste("Please provide a label argument to the actionButton",
