@@ -16,7 +16,7 @@
 #' # Suppose we want an action button that increments a counter. We first 
 #' # need to define UI and server-side logic for the button.
 #' ####################################################################
-#' library(shiny)
+#' pacman::p_load_current_gh(c("kahaaga/shinymodules", "rstudio/shiny"))
 #' 
 #' # Function that displays the UI created server-side.
 #' actionButtonTestUI <- function(id) {
@@ -103,7 +103,7 @@ actionButtonUI <- function(id,
 #' # Suppose we want three action buttons that increments separate counters.
 #' # We first need to define UI and server-side logic for the buttons.
 #' ####################################################################
-#' library(shiny)
+#' pacman::p_load_current_gh(c("kahaaga/shinymodules", "rstudio/shiny"))
 #' 
 #' # Function that displays the UI created server-side.
 #' actionButtonTestUI <- function(id) {
