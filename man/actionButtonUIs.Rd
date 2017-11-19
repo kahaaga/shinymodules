@@ -2,8 +2,7 @@
 % Please edit documentation in R/actionbuttonUI.R
 \name{actionButtonUIs}
 \alias{actionButtonUIs}
-\title{Create a tagList of action buttons using the actionButtonUI wrapper for
-shiny::actionButton.}
+\title{actionButtonUI}
 \usage{
 actionButtonUIs(ids, labels = NULL, icons = NULL, widths = NULL,
   custom_css = NULL)
@@ -33,8 +32,8 @@ styles for each action button, provide a vector of custom css text strings
 with one element per action button.}
 }
 \description{
-Create a tagList of action buttons using the actionButtonUI wrapper for
-shiny::actionButton.
+Create a tagList of action buttons using the actionButtonUI 
+    wrapper for shiny::actionButton.
 }
 \examples{
 if (interactive()) {

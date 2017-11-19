@@ -1,5 +1,5 @@
-#' Wrapper around shiny::actionButton.
-#' 
+#' @title actionButtonUI
+#' @description Wrapper around shiny::actionButton.
 #' @param id A unique string id for the action button. If your code is modularised,
 #'     remember to wrap the id with the relevant session namespace function, e.g.
 #'     numericValueUI(id = session$ns("someinput")).
@@ -77,8 +77,9 @@ actionButtonUI <- function(id,
   )
 }
 
-#' Create a tagList of action buttons using the actionButtonUI wrapper for
-#' shiny::actionButton. 
+#' @title actionButtonUI
+#' @description Create a tagList of action buttons using the actionButtonUI 
+#'     wrapper for shiny::actionButton. 
 #' @param ids A unique string id for the numericInput. If your code is modularised,
 #'     remember to wrap the id with the relevant session namespace function, e.g.
 #'     numericValueUI(id = session$ns("someinput")).

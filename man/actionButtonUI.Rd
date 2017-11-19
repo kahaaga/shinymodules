@@ -2,7 +2,7 @@
 % Please edit documentation in R/actionbuttonUI.R
 \name{actionButtonUI}
 \alias{actionButtonUI}
-\title{Wrapper around shiny::actionButton.}
+\title{actionButtonUI}
 \usage{
 actionButtonUI(id,
   label = paste("Please provide a label argument to the actionButton",
