@@ -39,8 +39,8 @@ shiny::actionButton.
 \examples{
 if (interactive()) {
 ####################################################################
-# Suppose we want an action button that increments a counter. We first 
-# need to define UI and server-side logic for the button.
+# Suppose we want three action buttons that increments separate counters.
+# We first need to define UI and server-side logic for the buttons.
 ####################################################################
 library(shiny)
 
@@ -51,7 +51,7 @@ actionButtonTestUI <- function(id) {
   fluidRow(uiOutput(ns("increment_buttons")))
 }
 
-# Server-side module that generates the action button.
+# Server-side module that generates the action buttons.
 actionButtonTest <- function(input, output, session) {
   output$increment_buttons <- renderUI({
     button_ids = c("increment1", "increment2", "woopdidoop")
