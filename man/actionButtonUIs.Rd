@@ -2,7 +2,7 @@
 % Please edit documentation in R/actionbuttonUI.R
 \name{actionButtonUIs}
 \alias{actionButtonUIs}
-\title{actionButtonUI}
+\title{actionButtonUIs}
 \usage{
 actionButtonUIs(ids, labels = NULL, icons = NULL, widths = NULL,
   custom_css = NULL)

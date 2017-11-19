@@ -77,7 +77,7 @@ actionButtonUI <- function(id,
   )
 }
 
-#' @title actionButtonUI
+#' @title actionButtonUIs
 #' @description Create a tagList of action buttons using the actionButtonUI 
 #'     wrapper for shiny::actionButton. 
 #' @param ids A unique string id for the numericInput. If your code is modularised,
