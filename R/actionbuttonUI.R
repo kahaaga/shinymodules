@@ -16,6 +16,7 @@
 #' # Suppose we want an action button that increments a counter. We first 
 #' # need to define UI and server-side logic for the button.
 #' ####################################################################
+#' library(shiny)
 #' 
 #' # Function that displays the UI created server-side.
 #' actionButtonTestUI <- function(id) {
