@@ -82,9 +82,8 @@ actionButtonUI <- function(id,
   )
 }
 
-#' Creates a tagList of action buttons using the actionButtonUI wrapper. Each
-#' of the action buttons are wrapped in divs that can be styles with the 
-#' custom_css argument.
+#' Create a tagList of action buttons using the actionButtonUI wrapper for
+#' shiny::actionButton. 
 #' @param ids A unique string id for the numericInput. If your code is modularised,
 #'     remember to wrap the id with the relevant session namespace function, e.g.
 #'     numericValueUI(id = session$ns("someinput")).
