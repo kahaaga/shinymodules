@@ -1,15 +1,15 @@
 #' Wrapper around shiny::actionButton.
 #' 
 #' @param id A unique string id for the action button. If your code is modularised,
-#'   remember to wrap the id with the relevant session namespace function, e.g.
-#'   numericValueUI(id = session$ns("someinput")).
+#'     remember to wrap the id with the relevant session namespace function, e.g.
+#'     numericValueUI(id = session$ns("someinput")).
 #' @param width The width of the shiny::numericValue UI element. Must be valid
-#'   css (i.e. "10%" or "150px" will work).
+#'     css (i.e. "10%" or "150px" will work).
 #' @param icon An icon for the action button (see shiny::icon).
 #' @param width The widths of the action buttons. Must be valid css.
 #' @param custom_css If provided, the action button is wrapped in a div styled 
-#'   by the custom_css input. For example, one could provide 
-#'   custom_css = "display: inline-block;" to display the action button inline.
+#'     by the custom_css input. For example, one could provide 
+#'     custom_css = "display: inline-block;" to display the action button inline.
 #' @examples
 #' if (interactive()) {
 #' ####################################################################
@@ -84,23 +84,21 @@ actionButtonUI <- function(id,
 
 #' Creates a tagList of action buttons wrapped in (potentially styled) divs.
 #' @param ids A unique string id for the numericInput. If your code is modularised,
-#'   remember to wrap the id with the relevant session namespace function, e.g.
-#'   numericValueUI(id = session$ns("someinput")).
+#'     remember to wrap the id with the relevant session namespace function, e.g.
+#'     numericValueUI(id = session$ns("someinput")).
 #' @param labels A label for the input.
 #' @param icons Icons for the action buttons.
-#' @param widths The widths of the action buttons. Must be valid
-#'   css (i.e. "10%" or "150px" will work; see shiny::validateCssUnit). 
-#'   To use the same width on all action buttons, provide a single-text string or 
-#'   a vector with one text string. To use different widths for each action 
-#'   button, provide a vector of custom css text strings with one element per 
-#'   action button.
+#' @param widths The widths of the action buttons. Must be valid css (i.e. "10%" or "150px" will work; see shiny::validateCssUnit). To use the same width on all action buttons, provide a single-text string or 
+#'     a vector with one text string. To use different widths for each action 
+#'     button, provide a vector of custom css text strings with one element per 
+#'     action button.
 #' @param custom_css If provided, the action buttons are wrapped in divs each
-#'   styled by the custom_css input. For example, when creating multiple action
-#'   buttons, one could provide custom_css = "display: inline-block;" to display 
-#'   the action buttons inline. To use the same style on all action buttons, 
-#'   provide a single-text string or single-element vector. To use different
-#'   styles for each action button, provide a vector of custom css text strings
-#'   with one element per action button.
+#'     styled by the custom_css input. For example, when creating multiple action
+#'     buttons, one could provide custom_css = "display: inline-block;" to display 
+#'     the action buttons inline. To use the same style on all action buttons, 
+#'     provide a single-text string or single-element vector. To use different
+#'     styles for each action button, provide a vector of custom css text strings
+#'     with one element per action button.
 #' @examples 
 #' actionButtonUIs(ids = c("trigger_calculation", "trigger_plot"))
 #' actionButtonUIs(ids = c("trigger_calculation", "trigger_plot"), widths = "150px", custom_css = "display: inline-block")
