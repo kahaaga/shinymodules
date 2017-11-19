@@ -97,9 +97,58 @@ actionButtonUI <- function(id,
 #'     styles for each action button, provide a vector of custom css text strings
 #'     with one element per action button.
 #' @examples 
-#' actionButtonUIs(ids = c("trigger_calculation", "trigger_plot"))
-#' actionButtonUIs(ids = c("trigger_calculation", "trigger_plot"), widths = "150px", custom_css = "display: inline-block")
-#  actionButtonUIs(ids = c("trigger_calculation", "trigger_plot"), widths = c("200px", "100px"), custom_css = c("display: inline-block", "display: flex"))
+#' if (interactive()) {
+#' ####################################################################
+#' # Suppose we want an action button that increments a counter. We first 
+#' # need to define UI and server-side logic for the button.
+#' ####################################################################
+#' library(shiny)
+#' 
+#' # Function that displays the UI created server-side.
+#' actionButtonTestUI <- function(id) {
+#'   ns <- NS(id)
+#'   
+#'   fluidRow(uiOutput(ns("increment_buttons")))
+#' }
+#' 
+#' # Server-side module that generates the action button.
+#' actionButtonTest <- function(input, output, session) {
+#'   output$increment_buttons <- renderUI({
+#'     button_ids = c("increment1", "increment2", "woopdidoop")
+#'     shinymodules::actionButtonUIs(
+#'       ids = sapply(button_ids, session$ns),
+#'       labels = paste0("I'm a button with id '", button_ids, 
+#'                       "'. Push me, please."),
+#'       widths = paste0(c(200, 300, 400), "px"),
+#'       custom_css = "display: inline-block"
+#'     )
+#'   })
+#' }
+#' 
+#' ui <- fluidPage(
+#'   # Let's suppose we have a page where we want the action button
+#'   # to appear. Here we call the UI logic. We'll also add a textOutput 
+#'   # showing the number of times the button has been clicked.
+#'   fluidRow(
+#'     actionButtonTestUI(id = "helppage"), 
+#'     textOutput("numclicks1"),
+#'     textOutput("numclicks2"),
+#'     textOutput("numclickswoop")
+#   )
+#' )
+#' 
+#' server <- function(input, output, session) {
+#'   # Call the module that generates the action button.
+#'   callModule(module = actionButtonTest, id = "helppage")
+#'   
+#'   # The number of times the button has been clicked
+#'   output$numclicks1 <- renderText({input[["helppage-increment1-actionbutton"]]})
+#'   output$numclicks2 <- renderText({input[["helppage-increment2-actionbutton"]]})
+#'   output$numclickswoop <- renderText({input[["helppage-woopdidoop-actionbutton"]]})
+#' }
+#' 
+#' shinyApp(ui = ui, server = server)
+#' }
 #' @export
 actionButtonUIs <- function(ids,
                             labels = NULL,
