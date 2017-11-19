@@ -17,7 +17,7 @@ numericValueUI(id = session$ns("someinput")).}
 \item{icon}{An icon for the action button (see shiny::icon).}
 
 \item{width}{The width of the shiny::numericValue UI element. Must be valid
-css (i.e. '10%' or '150px' will work).}
+css (i.e. '10\%' or '150px' will work).}
 
 \item{custom_css}{If provided, the action button is wrapped in a div styled 
 by the custom_css input. For example, one could provide 

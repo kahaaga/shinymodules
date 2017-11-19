@@ -16,7 +16,9 @@ numericValueUI(id = session$ns("someinput")).}
 
 \item{icons}{Icons for the action buttons.}
 
-\item{widths}{The widths of the action buttons. Must be valid css (i.e. "10%" or "150px" will work; see shiny::validateCssUnit). To use the same width on all action buttons, provide a single-text string or 
+\item{widths}{The widths of the action buttons. Must be valid css (i.e. 
+"10\%" or "150px" will work; see shiny::validateCssUnit). To use the same 
+width on all action buttons, provide a single-text string or 
 a vector with one text string. To use different widths for each action 
 button, provide a vector of custom css text strings with one element per 
 action button.}

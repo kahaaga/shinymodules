@@ -4,7 +4,7 @@
 #'     remember to wrap the id with the relevant session namespace function, e.g.
 #'     numericValueUI(id = session$ns("someinput")).
 #' @param width The width of the shiny::numericValue UI element. Must be valid
-#'     css (i.e. '10%' or '150px' will work).
+#'     css (i.e. '10\%' or '150px' will work).
 #' @param icon An icon for the action button (see shiny::icon).
 #' @param width The widths of the action buttons. Must be valid css.
 #' @param custom_css If provided, the action button is wrapped in a div styled 
@@ -88,7 +88,9 @@ actionButtonUI <- function(id,
 #'     numericValueUI(id = session$ns("someinput")).
 #' @param labels A label for the input.
 #' @param icons Icons for the action buttons.
-#' @param widths The widths of the action buttons. Must be valid css (i.e. "10%" or "150px" will work; see shiny::validateCssUnit). To use the same width on all action buttons, provide a single-text string or 
+#' @param widths The widths of the action buttons. Must be valid css (i.e. 
+#'     "10\%" or "150px" will work; see shiny::validateCssUnit). To use the same 
+#'     width on all action buttons, provide a single-text string or 
 #'     a vector with one text string. To use different widths for each action 
 #'     button, provide a vector of custom css text strings with one element per 
 #'     action button.
