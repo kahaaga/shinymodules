@@ -2,6 +2,8 @@
 
 export(actionButtonUI)
 export(actionButtonUIs)
+export(checkboxUI)
+export(checkboxUIs)
 export(numericValueUI)
 export(numericValueUIs)
 export(selectInputUI)

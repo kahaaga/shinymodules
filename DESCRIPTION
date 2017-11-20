@@ -11,4 +11,4 @@ RoxygenNote: 6.0.1
 Imports:
   shiny,
   shinydashboard,
-  flexdashboard,
+  flexdashboard
