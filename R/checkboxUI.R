@@ -36,8 +36,9 @@ checkboxUI <- function(id,
 }
 
 #' @title checkboxUIs
-#' @description Wrapper around shiny::checkboxInput
-#' @param ids String id for the checkboxex. If your code is modularised,
+#' @description Create a tagList of checkboxes using the checkboxUI 
+#'     wrapper for shiny::checkboxInput. 
+#' @param ids String id for the checkboxes. If your code is modularised,
 #'     remember to wrap the id with the relevant session namespace function, e.g.
 #'     checkboxUIs(id = sapply(c("someinput", "anotherinput", session$ns))).
 #' @param labels Labels for the checkboxes. 

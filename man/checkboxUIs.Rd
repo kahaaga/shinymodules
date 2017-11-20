@@ -8,7 +8,7 @@ checkboxUIs(ids, labels = NULL, icons = NULL, widths = NULL,
   custom_css = NULL)
 }
 \arguments{
-\item{ids}{String id for the checkboxex. If your code is modularised,
+\item{ids}{String id for the checkboxes. If your code is modularised,
 remember to wrap the id with the relevant session namespace function, e.g.
 checkboxUIs(id = sapply(c("someinput", "anotherinput", session$ns))).}
 
@@ -30,5 +30,6 @@ styles for each checkbox, provide a vector of custom css text strings
 with one element per checkbox.}
 }
 \description{
-Wrapper around shiny::checkboxInput
+Create a tagList of checkboxes using the checkboxUI 
+    wrapper for shiny::checkboxInput.
 }
